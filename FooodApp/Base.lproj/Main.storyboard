@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FooodApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Z4h-hx-gzn">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="foodId" id="h0s-1k-cZ5" customClass="FoodTableViewCell" customModule="FooodApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h0s-1k-cZ5" id="mvG-91-zgt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hamburger" translatesAutoresizingMaskIntoConstraints="NO" id="T7o-HO-ZwM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="iZ8-Xo-yiZ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hamburger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S08-07-n7G">
+                                                    <rect key="frame" x="135" y="5" width="100" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="189.90 TL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oN0-sT-Uoi">
+                                                    <rect key="frame" x="135" y="68" width="76.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" name="AccentColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OjS-sY-MnO">
+                                                    <rect key="frame" x="315" y="35" width="94" height="31"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="Sipariş Ver">
+                                                        <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                        <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="buyFood:" destination="h0s-1k-cZ5" eventType="touchUpInside" id="VDj-WM-aG3"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="oN0-sT-Uoi" firstAttribute="leading" secondItem="T7o-HO-ZwM" secondAttribute="trailing" constant="35" id="0jG-x4-jRF"/>
+                                                <constraint firstItem="oN0-sT-Uoi" firstAttribute="bottom" secondItem="mvG-91-zgt" secondAttribute="bottomMargin" id="0zy-t3-KY6"/>
+                                                <constraint firstItem="T7o-HO-ZwM" firstAttribute="leading" secondItem="mvG-91-zgt" secondAttribute="leadingMargin" constant="-20" id="8W2-eZ-sFg"/>
+                                                <constraint firstItem="S08-07-n7G" firstAttribute="top" secondItem="mvG-91-zgt" secondAttribute="top" constant="5" id="CZH-Df-b21"/>
+                                                <constraint firstItem="OjS-sY-MnO" firstAttribute="top" secondItem="mvG-91-zgt" secondAttribute="top" constant="35" id="JAu-qA-iuh"/>
+                                                <constraint firstItem="T7o-HO-ZwM" firstAttribute="centerY" secondItem="mvG-91-zgt" secondAttribute="centerY" id="ZaP-nK-EWN"/>
+                                                <constraint firstItem="S08-07-n7G" firstAttribute="top" secondItem="mvG-91-zgt" secondAttribute="top" constant="5" id="cs0-LY-aS2"/>
+                                                <constraint firstItem="S08-07-n7G" firstAttribute="leading" secondItem="T7o-HO-ZwM" secondAttribute="trailing" constant="35" id="dAM-Oj-sSb"/>
+                                                <constraint firstAttribute="bottom" secondItem="OjS-sY-MnO" secondAttribute="bottom" constant="34" id="hwz-iz-GOQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="OjS-sY-MnO" secondAttribute="trailing" constant="5" id="ozU-8z-MDm"/>
+                                                <constraint firstItem="T7o-HO-ZwM" firstAttribute="top" secondItem="mvG-91-zgt" secondAttribute="topMargin" constant="-11" id="r9K-Zc-eXt"/>
+                                                <constraint firstAttribute="trailing" secondItem="OjS-sY-MnO" secondAttribute="trailing" constant="5" id="rCN-fB-XMf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="foodImageView" destination="T7o-HO-ZwM" id="9Sp-aZ-lJC"/>
+                                            <outlet property="foodLabelName" destination="S08-07-n7G" id="bkT-XV-ZjP"/>
+                                            <outlet property="foodPriceLabel" destination="oN0-sT-Uoi" id="9kQ-fT-WSX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Z4h-hx-gzn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SS6-vs-uhd"/>
+                            <constraint firstItem="Z4h-hx-gzn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="knW-PG-gKL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z4h-hx-gzn" secondAttribute="trailing" id="tMV-pv-21O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z4h-hx-gzn" secondAttribute="bottom" id="zaE-va-vxz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="foodsTableView" destination="Z4h-hx-gzn" id="cuy-kl-qZY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hamburger" width="4338" height="3604"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
